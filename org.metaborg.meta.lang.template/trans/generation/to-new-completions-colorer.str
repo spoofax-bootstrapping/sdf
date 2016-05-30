@@ -1,20 +1,13 @@
 module generation/to-new-completions-colorer
 
-
 imports
-  libstratego-lib
-  libstrc
-  signatures/TemplateLang-sig
-  analysis/types
-  runtime/nabl/-
-  runtime/task/-
-  runtime/types/-
+
+  signatures/sdf2-core/-
+  signatures/ColorerService-sig
   analysis/desugar
   generation/to-str
-  lib/EditorService
-  
-  
-  rules
+    
+rules
     
   module-to-cmp-colorer:
   Module(m, i*, s*) -> Module(m', i'*, [Colorer("", c*)])

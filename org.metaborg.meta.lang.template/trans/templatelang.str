@@ -9,7 +9,6 @@ imports
   signatures/TemplateLang-sig
   pp/TemplateLang-parenthesize
   outline
-  EditorService
   stratego/metaborg
   runtime/analysis/-
   runtime/nabl/-

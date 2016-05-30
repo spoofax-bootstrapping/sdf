@@ -9,7 +9,6 @@ imports
   libstratego-sglr
   lib/sdf-desugar
   lib/sdf-parenthesize
-  lib/EditorService
   signatures/TemplateLang-sig
   analysis/desugar
   stratego/metaborg
@@ -24,6 +23,8 @@ imports
   lib/ds/pp/-
   normalization/to-parse-table
   normalization/refactor-pt
+  pp/EditorService-pp
+  pp/EditorService-parenthesize
   
 rules
     
@@ -377,9 +378,11 @@ rules
 
   //pretty-printer for the generated esv
   pp-esv-to-string =
-    topdown(try(pp-fix-string-quotes));
-    ast2box(|[<esv-pp-table>]);
-    box2text-string(|80)
+    topdown(try(pp-fix-string-quotes))
+    ; parenthesize-EditorService
+    ; prettyprint-EditorService 
+    ; !V([], <id>)
+    ; box2text-string(|120)
 
   pp-fix-string-quotes:
     String(string) -> String(string')
@@ -394,12 +397,6 @@ rules
       <not(string-starts-with(|"<"))> string
     with
       string' := <conc-strings> ("<", string, ">")
-
-  esv-pp-table =
-    DescriptorPPTable
-  <+
-    tbl := <import-term(target/metaborg/EditorService-pretty.pp.af)>;
-    rules(DescriptorPPTable := tbl)
     
     // When given a tuple (path, string) this writes string into path.
     write-string-to-file =
