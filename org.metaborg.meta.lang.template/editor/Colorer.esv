@@ -3,6 +3,7 @@ module Colorer
 imports 
 
   editor/Colorer.generated
+  completion/colorer/TemplateLang-cc-esv
 
 colorer
 
