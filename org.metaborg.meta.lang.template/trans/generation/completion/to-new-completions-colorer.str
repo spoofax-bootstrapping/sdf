@@ -5,7 +5,7 @@ imports
   signatures/sdf2-core/-
   signatures/ColorerService-sig
   analysis/desugar
-  generation/to-str
+  generation/gen-utils/to-str
     
 rules
     
