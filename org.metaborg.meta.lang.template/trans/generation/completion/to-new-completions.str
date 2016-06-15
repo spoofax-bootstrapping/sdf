@@ -1,13 +1,9 @@
 module generation/completion/to-new-completions
 
 imports
-  libstratego-lib
+
+  signatures/sdf2-core/-
   libstrc
-  signatures/TemplateLang-sig
-  analysis/types
-  runtime/nabl/-
-  runtime/task/-
-  runtime/types/-
   analysis/desugar
   generation/gen-utils/to-str
   signatures/modules/Modules-sig

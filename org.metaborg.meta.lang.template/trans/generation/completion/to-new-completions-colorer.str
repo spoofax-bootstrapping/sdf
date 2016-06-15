@@ -1,19 +1,12 @@
 module generation/completion/to-new-completions-colorer
 
-
 imports
-  libstratego-lib
-  libstrc
-  signatures/TemplateLang-sig
-  analysis/types
-  runtime/nabl/-
-  runtime/task/-
-  runtime/types/-
+
+  signatures/sdf2-core/-
+  signatures/ColorerService-sig
   analysis/desugar
   generation/gen-utils/to-str
-  lib/EditorService
-  signatures/sorts/Sorts-sig
-  
+    
 rules
     
   module-to-cmp-colorer:

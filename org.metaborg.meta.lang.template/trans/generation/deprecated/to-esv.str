@@ -1,16 +1,15 @@
 module generation/to-esv
 
 imports
-  signatures/TemplateLang-sig
-  EditorService
+
+  signatures/sdf2-core/-
+  signatures/CompletionsService-sig
   utils/attributes
   utils/misc
   analysis/desugar
- // templatelang/expand
-  generation/gen-utils/to-str
-  generation/gen-utils/to-template
-  signatures/sorts/Sorts-sig
-  signatures/sdf2-core/Sdf2-sig
+  generation/to-str
+  generation/to-template
+  
 
 rules
 
