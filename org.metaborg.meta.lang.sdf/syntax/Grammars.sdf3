@@ -1,0 +1,14 @@
+module Grammars
+
+imports
+  Comments
+
+sorts
+
+  Grammar
+
+context-free syntax
+
+  Grammar.Empty-grammar = <(/)> 
+  Grammar.Conc-grammars = <<"left":Grammar> <"right":Grammar>> {assoc}
+  Grammar = <( <Grammar> )> {bracket}

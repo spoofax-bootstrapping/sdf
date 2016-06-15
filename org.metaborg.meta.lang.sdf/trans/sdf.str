@@ -8,8 +8,8 @@ imports
   analysis
   generate-syntax-templates
   stratego/metaborg
-  signatures/SDF
   editor/builders
+  signatures/-
   check
   outline
 

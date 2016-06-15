@@ -1,0 +1,15 @@
+module Basic
+
+imports
+  Kernel
+
+context-free syntax
+
+  Grammar.Lexical-syntax = <lexical syntax <Productions>> 
+  Grammar.Context-free-syntax = <context-free syntax <Productions>> 
+  Grammar.Variables = <variables <Productions>> 
+  Grammar.Lexical-variables = <lexical variables <Productions>> 
+  Symbol.Cf = <\< <Symbol> -CF \>> 
+  Symbol.Lex = <\< <Symbol> -LEX \>> 
+  Symbol.Varsym = <\< <Symbol> -VAR \>> 
+  Symbol.Layout = <LAYOUT> 

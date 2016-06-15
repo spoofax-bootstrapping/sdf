@@ -1,0 +1,19 @@
+module RealCon
+
+imports
+  IntCon
+  NatCon
+
+context-free start-symbols
+
+  RealCon
+
+sorts
+
+  OptExp RealCon
+
+context-free syntax
+
+  OptExp.Present = <e <IntCon>> 
+  OptExp.Absent =  
+  RealCon.Real-con = <<base:IntCon> . <decimal:NatCon> <exp:OptExp>> 

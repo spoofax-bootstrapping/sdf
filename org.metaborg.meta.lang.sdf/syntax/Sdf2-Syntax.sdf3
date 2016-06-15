@@ -1,0 +1,34 @@
+module Sdf2-Syntax
+
+imports
+  Kernel	
+  Basic	
+  Modules	
+  Regular	
+  Lifting	
+  Priority	
+  CC	
+  Sorts	
+  Start-Symbols	
+  Literals	
+  Labels	
+  Restrictions	
+  Aliases
+
+sorts
+
+  SDF
+
+context-free syntax
+
+  Symbol.Start = <\<START\>> 
+  Symbol.File-start = <\<Start\>> 
+  Grammar.Lexical-priorities = <lexical priorities <Priorities>> 
+  Grammar.Context-free-priorities = <context-free priorities <Priorities>> 
+  Grammar.Lexical-restrictions = <lexical restrictions <Restrictions>> 
+  Grammar.Context-free-restrictions = <context-free restrictions <Restrictions>> 
+  SDF.Definition = <definition <Definition>> 
+
+context-free priorities
+
+  {} > {}

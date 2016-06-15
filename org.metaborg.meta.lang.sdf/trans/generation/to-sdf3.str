@@ -1,7 +1,5 @@
 module generation/to-sdf3
 imports
-  signatures/SDF
-  
   signatures/-
   signatures/aliases/-
   signatures/aterms/-

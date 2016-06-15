@@ -1,0 +1,24 @@
+module Regular
+
+imports
+  Kernel
+  IntCon
+  Symbols
+
+context-free syntax
+
+  Symbol.Empty = <( )> 
+  Symbol.Seq = <( <head:Symbol> <tail:Symbol+> )> 
+  Symbol.Opt = <<Symbol> ?> 
+  Symbol.Iter = <<Symbol> +> 
+  Symbol.Iter-star = <<Symbol> *> 
+  Symbol.Iter-sep = <{ <Symbol> <sep:Symbol> } +> 
+  Symbol.Iter-star-sep = <{ <Symbol> <sep:Symbol> } *> 
+  Symbol.Tuple = <\< <head:Symbol> , <rest:{Symbol ","}+> \>> 
+  Symbol.Func = <( <arguments:Symbols> =\> <results:Symbol> )> 
+  Symbol.Alt = <<"left":Symbol> | <"right":Symbol>> {right}
+  Symbol.Strategy = <( <"left":Symbol> -\> <"right":Symbol> )> 
+
+context-free priorities
+
+  {} > {}

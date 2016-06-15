@@ -1,0 +1,47 @@
+module Modules
+
+imports
+  Kernel	
+  Renaming
+  Symbols
+  
+sorts
+
+  ModuleWord
+
+context-free start-symbols
+
+  Module
+
+sorts
+
+  ModuleId ModuleName Import Imports Section Sections Module Definition ImpSection
+
+lexical syntax
+
+  ModuleWord.Word = letters:[A-Za-z0-9\_\-]+ 
+  ModuleId.Leaf = ModuleWord 
+  ModuleId.Root = sep:"/" basename:ModuleId 
+  ModuleId.Path = dirname:ModuleWord sep:"/" basename:ModuleId 
+
+context-free syntax
+
+  Definition = <<list:Module*>> 
+  Module.Module = <module <ModuleName> <list:ImpSection*> <Sections>> 
+  Section.Exports = <exports <Grammar>> 
+  Section.Hiddens = <hiddens <Grammar>> 
+  Sections = <<list:Section*>> 
+  ModuleName.Unparameterized = ModuleId 
+  ModuleName.Parameterized = <<ModuleId> [ <params:Symbols> ]> 
+  Attribute.Id = <id ( <ModuleName> )> 
+  ImpSection.Imports = <imports <list:Imports>> 
+  Grammar.Imp-section = ImpSection 
+  Imports = <<list:Import*>> 
+  Import.Module = ModuleName 
+  Import.Renamed-module = <<ModuleName> <Renamings>> 
+  Import = <( <Import> )> {bracket}
+
+lexical restrictions
+
+  ModuleWord -/- [A-Za-z0-9\_\-]
+  ModuleId -/- [\/]

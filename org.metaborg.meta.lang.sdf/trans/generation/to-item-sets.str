@@ -1,7 +1,7 @@
 module to-item-sets
 
 imports
-  signatures/SDF
+  signatures/-
   libstratego-lib
   libstratego-sglr
   libstratego-gpp

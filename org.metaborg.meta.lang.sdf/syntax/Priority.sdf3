@@ -1,0 +1,28 @@
+module Priority
+
+imports
+  Kernel
+  NatCon
+
+sorts
+
+  Associativity ArgumentIndicator Group Priority Priorities
+
+context-free syntax
+
+  Associativity.Left = <left> 
+  Associativity.Right = <right> 
+  Associativity.Non-assoc = <non-assoc> 
+  Associativity.Assoc = <assoc> 
+  Attribute.Bracket = <bracket> 
+  Attribute.Assoc = Associativity 
+  ArgumentIndicator.Default = <\< <arguments:{NatCon ","}+> \>> 
+  Group.With-arguments = <<Group> <ArgumentIndicator>> {non-assoc}
+  Group.Non-transitive = <<Group> .> {non-assoc}
+  Group.Simple-group = Production 
+  Group.Prods-group = <{ <Productions> }> 
+  Group.Assoc-group = <{ <Associativity> : <Productions> }> 
+  Priority.Chain = <<list:{Group ">"}+>> 
+  Priority.Assoc = <<"left":Group> <Associativity> <"right":Group>> 
+  Priorities = <<list:{Priority ","}*>> 
+  Grammar.Priorities = <priorities <Priorities>> 

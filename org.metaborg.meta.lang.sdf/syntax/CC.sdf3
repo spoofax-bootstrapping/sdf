@@ -1,0 +1,9 @@
+module CC
+
+imports
+  Character-Class	
+  Kernel
+
+context-free syntax
+
+  Symbol.Char-class = CharClass 

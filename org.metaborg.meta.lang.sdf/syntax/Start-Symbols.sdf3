@@ -1,0 +1,11 @@
+module Start-Symbols
+
+imports
+  Kernel
+  Symbols
+
+context-free syntax
+
+  Grammar.Kernel-start-symbols = <start-symbols <Symbols>> 
+  Grammar.Lexical-start-symbols = <lexical start-symbols <Symbols>> 
+  Grammar.Context-free-start-symbols = <context-free start-symbols <Symbols>> 

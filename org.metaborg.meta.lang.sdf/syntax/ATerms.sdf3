@@ -1,0 +1,34 @@
+module ATerms
+
+imports
+  IntCon	
+  RealCon	
+  StrCon	
+  IdentifierCon
+
+sorts
+
+  AFun ATerm Annotation
+
+context-free syntax
+
+  AFun.Quoted = StrCon 
+  AFun.Unquoted = IdCon 
+
+context-free syntax
+
+  ATerm.Int = IntCon 
+  ATerm.Real = RealCon 
+  ATerm.Fun = <<fun:AFun>> 
+  ATerm.Appl = <<fun:AFun> ( <args:{ATerm ","}+> )> 
+  ATerm.Placeholder = <\< <type:ATerm> \>> 
+  ATerm.List = <[ <elems:{ATerm ","}*> ]> 
+  ATerm.Annotated = <<trm:ATerm> <Annotation>> 
+
+context-free syntax
+
+  Annotation.Default = <{ <annos:{ATerm ","}+> }> 
+
+context-free start-symbols
+
+  ATerm

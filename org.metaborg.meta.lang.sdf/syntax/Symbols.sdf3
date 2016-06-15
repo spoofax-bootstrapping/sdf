@@ -1,0 +1,13 @@
+module Symbols
+
+imports
+  Comments
+
+sorts
+
+  Symbol Symbols
+
+context-free syntax
+
+  Symbol = <( <Symbol> )> {bracket}
+  Symbols = <<list:Symbol*>> 

@@ -1,0 +1,14 @@
+module NatCon
+
+
+sorts
+
+  NatCon
+
+lexical syntax
+
+  NatCon.Digits = [0-9]+ 
+
+lexical restrictions
+
+  NatCon -/- [0-9]

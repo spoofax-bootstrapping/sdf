@@ -1,0 +1,16 @@
+module Labels
+
+imports
+  Kernel	
+  StrCon
+  IdentifierCon
+
+sorts
+
+  Label
+
+context-free syntax
+
+  Label.Quoted = StrCon 
+  Label.Unquoted = IdCon 
+  Symbol.Label = <<Label> : <Symbol>> 

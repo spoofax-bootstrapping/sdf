@@ -1,0 +1,15 @@
+module Aliases
+
+imports
+  Kernel
+  Symbols
+
+sorts
+
+  Alias Aliases
+
+context-free syntax
+
+  Grammar.Aliases = <aliases <Aliases>> 
+  Alias.Alias = <<Symbol> -\> <alias:Symbol>> 
+  Aliases = <<list:Alias*>> 

@@ -1,0 +1,24 @@
+module Sorts
+
+imports
+  Kernel
+  Symbols
+
+sorts
+
+  Sort
+
+lexical syntax
+
+  Sort.One-char = head:[A-Z] 
+  Sort.More-chars = head:[A-Z] middle:[A-Za-z0-9\-]* last:[A-Za-z0-9] 
+
+context-free syntax
+
+  Symbol.Sort = Sort 
+  Symbol.Parameterized-sort = <<Sort> [[ <parameters:{Symbol ","}+> ]]> 
+  Grammar.Sorts = <sorts <Symbols>> 
+
+lexical restrictions
+
+  Sort -/- [A-Za-z0-9]

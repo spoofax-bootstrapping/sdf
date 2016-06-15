@@ -1,0 +1,20 @@
+module Kernel
+
+imports
+  ATerms	
+  Symbols	
+  Grammars
+
+sorts
+
+  Attribute ATermAttribute Attributes Production Productions
+
+context-free syntax
+
+  ATermAttribute.Default = <<aterm:ATerm>> 
+  Attribute.Term = ATermAttribute 
+  Attributes.Attrs = <{ <list:{Attribute ","}*> }> 
+  Attributes.No-attrs =  
+  Production.Prod = <<Symbols> -\> <result:Symbol> <Attributes>> 
+  Productions = <<list:Production*>> 
+  Grammar.Syntax = <syntax <Productions>> 

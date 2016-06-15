@@ -1,0 +1,13 @@
+module SDF
+
+imports
+
+  Start-Symbols
+  Modules
+  Sdf2
+  Sdf2-Syntax
+  EditorAdditions
+
+context-free start-symbols
+
+  SDF Module

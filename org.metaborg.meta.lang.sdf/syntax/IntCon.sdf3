@@ -1,0 +1,34 @@
+module IntCon
+
+imports
+  NatCon
+
+sorts
+
+  Integer
+
+context-free syntax
+
+  Integer.Nat-con = NatCon 
+  Integer.Positive = <+ <integer:Integer>> {non-assoc}
+  Integer.Negative = <- <integer:Integer>> {non-assoc}
+
+context-free priorities
+
+  {non-assoc :
+    Integer.Positive
+    Integer.Negative}
+
+context-free start-symbols
+
+  IntCon
+
+sorts
+
+  IntCon
+
+context-free syntax
+
+  IntCon.Natural = NatCon 
+  IntCon.Positive = <+ <NatCon>> 
+  IntCon.Negative = <- <NatCon>> 

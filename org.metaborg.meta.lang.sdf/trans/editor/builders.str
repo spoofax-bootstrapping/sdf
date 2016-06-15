@@ -1,7 +1,7 @@
 module editor/builders
 
 imports 
-  signatures/SDF
+  signatures/-
   generation/-
   stratego/metaborg
   pp/modules/Modules-pp

@@ -1,0 +1,13 @@
+module Comments
+
+imports
+  Whitespace
+
+lexical syntax
+
+  LAYOUT = "%%" line:~[\n]* "\n" 
+  LAYOUT = "%" content:~[\%\n]+ "%" 
+
+context-free restrictions
+
+  LAYOUT? -/- [\%]

@@ -1,0 +1,22 @@
+module EditorAdditions
+
+imports
+  Sdf2
+  StrCon
+
+/* 
+adds keyword-like syntax (and highlighting) for supported annotations and different abstract syntax for 
+constructors without cons: {"Simple"} 
+*/ 
+
+context-free syntax
+
+  Attribute.Constructor = Constructor {prefer}
+  Attribute = <recover> {prefer, ast("term(default(fun(unquoted(\"recover\"))))")}
+  Attribute = <completion> {prefer, ast("term(default(fun(unquoted(\"completion\"))))")}
+  Attribute = <incremental> {prefer, ast("term(default(fun(unquoted(\"incremental\"))))")}
+  Attribute = <deprecated> {prefer, ast("term(default(fun(unquoted(\"deprecated\"))))")}
+  Attribute = <deprecated ( <StrCon> )> {prefer, ast("term(default(appl(unquoted(\"deprecated\"), [fun(quoted(<1>))])))")}
+  Attribute = <ast ( <StrCon> )> {prefer, ast("term(default(appl(unquoted(\"ast\"), [fun(quoted(<1>))])))")}
+  Attribute = <cons ( <Constructor> )> {prefer, ast("term(default(appl(unquoted(\"cons\"), [fun(quoted(<1>))])))")}
+  Constructor = StrCon 

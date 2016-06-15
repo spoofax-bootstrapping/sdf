@@ -1,0 +1,8 @@
+module Lifting
+
+imports
+  Kernel
+
+context-free syntax
+
+  Symbol.Lifting = <` <Symbol> `> 
