@@ -21,13 +21,13 @@ sorts
 
 context-free syntax
 
-  Symbol.Start = <\<START\>> 
-  Symbol.File-start = <\<Start\>> 
-  Grammar.Lexical-priorities = <lexical priorities <Priorities>> 
-  Grammar.Context-free-priorities = <context-free priorities <Priorities>> 
-  Grammar.Lexical-restrictions = <lexical restrictions <Restrictions>> 
-  Grammar.Context-free-restrictions = <context-free restrictions <Restrictions>> 
-  SDF.Definition = <definition <Definition>> 
+  Symbol.start = <\<START\>> 
+  Symbol.file-start = <\<Start\>> 
+  Grammar.lexical-priorities = <lexical priorities <Priorities>> 
+  Grammar.context-free-priorities = <context-free priorities <Priorities>> 
+  Grammar.lexical-restrictions = <lexical restrictions <Restrictions>> 
+  Grammar.context-free-restrictions = <context-free restrictions <Restrictions>> 
+  SDF.definition = <definition <Definition>> 
 
 context-free priorities
 

@@ -11,21 +11,21 @@ sorts
 
 lexical syntax
 
-  SingleQuotedStrChar.Newline = "\\n" 
-  SingleQuotedStrChar.Tab = "\\t" 
-  SingleQuotedStrChar.Quote = "\\'" 
-  SingleQuotedStrChar.Backslash = "\\\\" 
-  SingleQuotedStrChar.Decimal = "\\" a:[0-9] b:[0-9] c:[0-9] 
-  SingleQuotedStrChar.Normal = ~[\0-\31\n\t\'\\] 
-  SingleQuotedStrCon.Default = [\'] chars:SingleQuotedStrChar* [\'] 
+  SingleQuotedStrChar.newline = "\\n" 
+  SingleQuotedStrChar.tab = "\\t" 
+  SingleQuotedStrChar.quote = "\\'" 
+  SingleQuotedStrChar.backslash = "\\\\" 
+  SingleQuotedStrChar.decimal = "\\" a:[0-9] b:[0-9] c:[0-9] 
+  SingleQuotedStrChar.normal = ~[\0-\31\n\t\'\\] 
+  SingleQuotedStrCon.default = [\'] chars:SingleQuotedStrChar* [\'] 
 
 context-free syntax
 
-  FunctionName.Unquoted-fun = IdCon 
-  FunctionName.Quoted-fun = StrCon 
+  FunctionName.unquoted-fun = IdCon 
+  FunctionName.quoted-fun = StrCon 
 
 context-free syntax
 
-  Symbol.Lit = <<string:StrCon>> 
-  Symbol.Ci-lit = <<ci-string:SingleQuotedStrCon>> 
-  Production.Prefix-fun = <<fun:FunctionName> ( <arguments:{Symbol ","}*> ) -\> <result:Symbol> <Attributes>> {avoid}
+  Symbol.lit = <<string:StrCon>> 
+  Symbol.ci-lit = <<ci-string:SingleQuotedStrCon>> 
+  Production.prefix-fun = <<fun:FunctionName> ( <arguments:{Symbol ","}*> ) -\> <result:Symbol> <Attributes>> {avoid}

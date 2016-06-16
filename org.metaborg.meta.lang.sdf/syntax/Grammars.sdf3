@@ -9,6 +9,6 @@ sorts
 
 context-free syntax
 
-  Grammar.Empty-grammar = <(/)> 
-  Grammar.Conc-grammars = <<"left":Grammar> <"right":Grammar>> {assoc}
+  Grammar.empty-grammar = <(/)> 
+  Grammar.conc-grammars = <<"left":Grammar> <"right":Grammar>> {assoc}
   Grammar = <( <Grammar> )> {bracket}

@@ -5,4 +5,4 @@ imports
 
 context-free syntax
 
-  Symbol.Lifting = <` <Symbol> `> 
+  Symbol.lifting = <` <Symbol> `> 

@@ -3,7 +3,6 @@ module to-item-sets
 imports
   signatures/-
   libstratego-lib
-  libstratego-sglr
   libstratego-gpp
 
 signature constructors

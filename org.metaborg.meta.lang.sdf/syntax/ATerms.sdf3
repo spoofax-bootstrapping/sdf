@@ -12,22 +12,22 @@ sorts
 
 context-free syntax
 
-  AFun.Quoted = StrCon 
-  AFun.Unquoted = IdCon 
+  AFun.quoted = StrCon 
+  AFun.unquoted = IdCon 
 
 context-free syntax
 
-  ATerm.Int = IntCon 
-  ATerm.Real = RealCon 
-  ATerm.Fun = <<fun:AFun>> 
-  ATerm.Appl = <<fun:AFun> ( <args:{ATerm ","}+> )> 
-  ATerm.Placeholder = <\< <type:ATerm> \>> 
-  ATerm.List = <[ <elems:{ATerm ","}*> ]> 
-  ATerm.Annotated = <<trm:ATerm> <Annotation>> 
+  ATerm.int = IntCon 
+  ATerm.real = RealCon 
+  ATerm.fun = <<fun:AFun>> 
+  ATerm.appl = <<fun:AFun> ( <args:{ATerm ","}+> )> 
+  ATerm.placeholder = <\< <type:ATerm> \>> 
+  ATerm.list = <[ <elems:{ATerm ","}*> ]> 
+  ATerm.annotated = <<trm:ATerm> <Annotation>> 
 
 context-free syntax
 
-  Annotation.Default = <{ <annos:{ATerm ","}+> }> 
+  Annotation.default = <{ <annos:{ATerm ","}+> }> 
 
 context-free start-symbols
 

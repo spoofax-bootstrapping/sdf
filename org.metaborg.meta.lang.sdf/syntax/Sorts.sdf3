@@ -10,14 +10,14 @@ sorts
 
 lexical syntax
 
-  Sort.One-char = head:[A-Z] 
-  Sort.More-chars = head:[A-Z] middle:[A-Za-z0-9\-]* last:[A-Za-z0-9] 
+  Sort.one-char = head:[A-Z] 
+  Sort.more-chars = head:[A-Z] middle:[A-Za-z0-9\-]* last:[A-Za-z0-9] 
 
 context-free syntax
 
-  Symbol.Sort = Sort 
-  Symbol.Parameterized-sort = <<Sort> [[ <parameters:{Symbol ","}+> ]]> 
-  Grammar.Sorts = <sorts <Symbols>> 
+  Symbol.sort = Sort 
+  Symbol.parameterized-sort = <<Sort> [[ <parameters:{Symbol ","}+> ]]> 
+  Grammar.'sorts = <sorts <Symbols>> 
 
 lexical restrictions
 

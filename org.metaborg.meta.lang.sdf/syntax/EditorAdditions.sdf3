@@ -11,7 +11,7 @@ constructors without cons: {"Simple"}
 
 context-free syntax
 
-  Attribute.Constructor = Constructor {prefer}
+  Attribute.constructor = Constructor {prefer}
   Attribute = <recover> {prefer, ast("term(default(fun(unquoted(\"recover\"))))")}
   Attribute = <completion> {prefer, ast("term(default(fun(unquoted(\"completion\"))))")}
   Attribute = <incremental> {prefer, ast("term(default(fun(unquoted(\"incremental\"))))")}

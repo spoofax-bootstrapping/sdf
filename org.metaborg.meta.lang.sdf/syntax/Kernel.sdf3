@@ -11,10 +11,10 @@ sorts
 
 context-free syntax
 
-  ATermAttribute.Default = <<aterm:ATerm>> 
-  Attribute.Term = ATermAttribute 
-  Attributes.Attrs = <{ <list:{Attribute ","}*> }> 
-  Attributes.No-attrs =  
-  Production.Prod = <<Symbols> -\> <result:Symbol> <Attributes>> 
+  ATermAttribute.default = <<aterm:ATerm>> 
+  Attribute.term = ATermAttribute 
+  Attributes.attrs = <{ <list:{Attribute ","}*> }> 
+  Attributes.no-attrs =  
+  Production.prod = <<Symbols> -\> <result:Symbol> <Attributes>> 
   Productions = <<list:Production*>> 
-  Grammar.Syntax = <syntax <Productions>> 
+  Grammar.syntax = <syntax <Productions>> 

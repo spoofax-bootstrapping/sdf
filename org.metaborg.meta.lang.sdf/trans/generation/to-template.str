@@ -1,29 +1,29 @@
 module to-template
 
-imports
-  libstratego-sglr
-  
-  signatures/-
-  signatures/aliases/-
-  signatures/aterms/-
-  signatures/basic/-
-  signatures/characterclass/-
-  signatures/constants/-
-  signatures/grammar/-
-  signatures/kernel/-
-  signatures/labels/-
-  signatures/layout/-
-  signatures/layout-constraints/-
-  signatures/lifting/-
-  signatures/literals/-
-  signatures/modules/-
-  signatures/priority/-
-  signatures/regular/-
-  signatures/renaming/-
-  signatures/restrictions/-
-  signatures/sdf2-core/-
-  signatures/sorts/-
-  signatures/symbols/-
+imports  
+  signatures/TemplateLang-sig
+  signatures/aliases/Aliases-sig
+  signatures/aterms/Aterms-sig
+  signatures/basic/Basic-sig
+  signatures/characterclass/Character-sig
+  signatures/characterclass/Character-Class-sig
+  signatures/constants/RealCon-sig
+  signatures/grammar/Grammars-sig
+  signatures/kernel/Kernel-sig
+  signatures/labels/Labels-sig
+  signatures/layout-constraints/Layout-Constraints-sig
+  signatures/lifting/Lifting-sig
+  signatures/literals/Literals-sig
+  signatures/modules/Modules-sig
+  signatures/priority/Priority-sig
+  signatures/regular/Regular-sig
+  signatures/renaming/Renaming-sig
+  signatures/restrictions/Restrictions-sig
+  signatures/sdf2-core/Sdf2-sig
+  signatures/sdf2-core/Sdf2-Syntax-sig
+  signatures/sorts/Sorts-sig
+  signatures/symbols/Symbols-sig
+  signatures/symbols/Start-Symbols-sig
 
 
 rules // Convert regular productions to desugared syntax templates

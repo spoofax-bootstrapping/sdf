@@ -10,17 +10,17 @@ sorts
 context-free syntax
 
   CharRange = Character 
-  CharRange.Range = <<start:Character> - <end:Character>> 
+  CharRange.range = <<start:Character> - <end:Character>> 
   CharRanges = CharRange 
-  CharRanges.Conc = <<"left":CharRanges> <"right":CharRanges>> {right, memo}
+  CharRanges.conc = <<"left":CharRanges> <"right":CharRanges>> {right, memo}
   CharRanges = <( <CharRanges> )> {bracket}
-  OptCharRanges.Absent =  
-  OptCharRanges.Present = CharRanges 
-  CharClass.Simple-charclass = <[ <OptCharRanges> ]> 
-  CharClass.Comp = <~ <CharClass>> 
-  CharClass.Diff = <<"left":CharClass> / <"right":CharClass>> {left, memo}
-  CharClass.Isect = <<"left":CharClass> /\\ <"right":CharClass>> {left, memo}
-  CharClass.Union = <<"left":CharClass> \\/ <"right":CharClass>> {left}
+  OptCharRanges.absent =  
+  OptCharRanges.present = CharRanges 
+  CharClass.simple-charclass = <[ <OptCharRanges> ]> 
+  CharClass.comp = <~ <CharClass>> 
+  CharClass.diff = <<"left":CharClass> / <"right":CharClass>> {left, memo}
+  CharClass.isect = <<"left":CharClass> /\\ <"right":CharClass>> {left, memo}
+  CharClass.union = <<"left":CharClass> \\/ <"right":CharClass>> {left}
   CharClass = <( <CharClass> )> {bracket, avoid}
 
 context-free priorities

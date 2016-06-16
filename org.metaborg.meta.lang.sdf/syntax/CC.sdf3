@@ -6,4 +6,4 @@ imports
 
 context-free syntax
 
-  Symbol.Char-class = CharClass 
+  Symbol.char-class = CharClass 

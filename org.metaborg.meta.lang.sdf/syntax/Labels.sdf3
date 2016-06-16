@@ -11,6 +11,6 @@ sorts
 
 context-free syntax
 
-  Label.Quoted = StrCon 
-  Label.Unquoted = IdCon 
-  Symbol.Label = <<Label> : <Symbol>> 
+  Label.quoted = StrCon 
+  Label.unquoted = IdCon 
+  Symbol.label = <<Label> : <Symbol>> 

@@ -10,19 +10,19 @@ sorts
 
 context-free syntax
 
-  Associativity.Left = <left> 
-  Associativity.Right = <right> 
-  Associativity.Non-assoc = <non-assoc> 
-  Associativity.Assoc = <assoc> 
-  Attribute.Bracket = <bracket> 
-  Attribute.Assoc = Associativity 
-  ArgumentIndicator.Default = <\< <arguments:{NatCon ","}+> \>> 
-  Group.With-arguments = <<Group> <ArgumentIndicator>> {non-assoc}
-  Group.Non-transitive = <<Group> .> {non-assoc}
-  Group.Simple-group = Production 
-  Group.Prods-group = <{ <Productions> }> 
-  Group.Assoc-group = <{ <Associativity> : <Productions> }> 
-  Priority.Chain = <<list:{Group ">"}+>> 
-  Priority.Assoc = <<"left":Group> <Associativity> <"right":Group>> 
+  Associativity.left = <left> 
+  Associativity.right = <right> 
+  Associativity.non-assoc = <non-assoc> 
+  Associativity.assoc = <assoc> 
+  Attribute.bracket = <bracket> 
+  Attribute.assoc = Associativity 
+  ArgumentIndicator.default = <\< <arguments:{NatCon ","}+> \>> 
+  Group.with-arguments = <<Group> <ArgumentIndicator>> {non-assoc}
+  Group.non-transitive = <<Group> .> {non-assoc}
+  Group.simple-group = Production 
+  Group.prods-group = <{ <Productions> }> 
+  Group.assoc-group = <{ <Associativity> : <Productions> }> 
+  Priority.chain = <<list:{Group ">"}+>> 
+  Priority.assoc = <<"left":Group> <Associativity> <"right":Group>> 
   Priorities = <<list:{Priority ","}*>> 
-  Grammar.Priorities = <priorities <Priorities>> 
+  Grammar.priorities = <priorities <Priorities>> 

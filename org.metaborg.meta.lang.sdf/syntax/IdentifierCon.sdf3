@@ -7,7 +7,7 @@ sorts
 
 lexical syntax
 
-  IdCon.Default = head:[A-Za-z] tail:[A-Za-z\-0-9]* 
+  IdCon.default = head:[A-Za-z] tail:[A-Za-z\-0-9]* 
 
 lexical restrictions
 

@@ -9,15 +9,15 @@ sorts
 
 context-free syntax
 
-  Integer.Nat-con = NatCon 
-  Integer.Positive = <+ <integer:Integer>> {non-assoc}
-  Integer.Negative = <- <integer:Integer>> {non-assoc}
+  Integer.nat-con = NatCon 
+  Integer.positive = <+ <integer:Integer>> {non-assoc}
+  Integer.negative = <- <integer:Integer>> {non-assoc}
 
 context-free priorities
 
   {non-assoc :
-    Integer.Positive
-    Integer.Negative}
+    Integer.positive
+    Integer.negative}
 
 context-free start-symbols
 
@@ -29,6 +29,6 @@ sorts
 
 context-free syntax
 
-  IntCon.Natural = NatCon 
-  IntCon.Positive = <+ <NatCon>> 
-  IntCon.Negative = <- <NatCon>> 
+  IntCon.natural = NatCon 
+  IntCon.positive = <+ <NatCon>> 
+  IntCon.negative = <- <NatCon>> 

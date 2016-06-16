@@ -14,6 +14,6 @@ sorts
 
 context-free syntax
 
-  OptExp.Present = <e <IntCon>> 
-  OptExp.Absent =  
-  RealCon.Real-con = <<base:IntCon> . <decimal:NatCon> <exp:OptExp>> 
+  OptExp.present = <e <IntCon>> 
+  OptExp.absent =  
+  RealCon.real-con = <<base:IntCon> . <decimal:NatCon> <exp:OptExp>> 

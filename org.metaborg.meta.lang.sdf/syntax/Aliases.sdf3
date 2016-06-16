@@ -10,6 +10,6 @@ sorts
 
 context-free syntax
 
-  Grammar.Aliases = <aliases <Aliases>> 
-  Alias.Alias = <<Symbol> -\> <alias:Symbol>> 
+  Grammar.aliases = <aliases <Aliases>> 
+  Alias.alias = <<Symbol> -\> <alias:Symbol>> 
   Aliases = <<list:Alias*>> 

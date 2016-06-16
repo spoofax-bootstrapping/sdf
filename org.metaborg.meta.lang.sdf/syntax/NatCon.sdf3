@@ -7,7 +7,7 @@ sorts
 
 lexical syntax
 
-  NatCon.Digits = [0-9]+ 
+  NatCon.digits = [0-9]+ 
 
 lexical restrictions
 

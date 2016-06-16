@@ -11,18 +11,18 @@ sorts
 
 context-free syntax
 
-  Lookahead.Char-class = CharClass 
-  Lookahead.Seq = <<head:CharClass> . <tail:Lookaheads>> 
-  Lookaheads.Single = Lookahead 
-  Lookaheads.Alt = <<"left":Lookaheads> | <"right":Lookaheads>> {right}
+  Lookahead.char-class = CharClass 
+  Lookahead.seq = <<head:CharClass> . <tail:Lookaheads>> 
+  Lookaheads.single = Lookahead 
+  Lookaheads.alt = <<"left":Lookaheads> | <"right":Lookaheads>> {right}
   Lookaheads = <( <Lookaheads> )> {bracket}
-  Lookaheads.List = <[[ <list:{Lookahead ","}*> ]]> 
-  Restriction.Follow = <<Symbols> -/- <Lookaheads>> 
+  Lookaheads.list = <[[ <list:{Lookahead ","}*> ]]> 
+  Restriction.follow = <<Symbols> -/- <Lookaheads>> 
   Restrictions = <<list:Restriction*>> 
-  Grammar.Restrictions = <restrictions <Restrictions>> 
-  Attribute.Reject = <reject> 
-  Attribute.Prefer = <prefer> 
-  Attribute.Avoid = <avoid> 
+  Grammar.restrictions = <restrictions <Restrictions>> 
+  Attribute.reject = <reject> 
+  Attribute.prefer = <prefer> 
+  Attribute.avoid = <avoid> 
 
 context-free priorities
 

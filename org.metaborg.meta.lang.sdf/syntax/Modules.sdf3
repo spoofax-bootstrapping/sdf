@@ -19,26 +19,26 @@ sorts
 
 lexical syntax
 
-  ModuleWord.Word = letters:[A-Za-z0-9\_\-]+ 
-  ModuleId.Leaf = ModuleWord 
-  ModuleId.Root = sep:"/" basename:ModuleId 
-  ModuleId.Path = dirname:ModuleWord sep:"/" basename:ModuleId 
+  ModuleWord.word = letters:[A-Za-z0-9\_\-]+ 
+  ModuleId.leaf = ModuleWord 
+  ModuleId.root = sep:"/" basename:ModuleId 
+  ModuleId.path = dirname:ModuleWord sep:"/" basename:ModuleId 
 
 context-free syntax
 
   Definition = <<list:Module*>> 
-  Module.Module = <module <ModuleName> <list:ImpSection*> <Sections>> 
-  Section.Exports = <exports <Grammar>> 
-  Section.Hiddens = <hiddens <Grammar>> 
+  Module.'module = <module <ModuleName> <list:ImpSection*> <Sections>> 
+  Section.exports = <exports <Grammar>>
+  Section.hiddens = <hiddens <Grammar>> 
   Sections = <<list:Section*>> 
-  ModuleName.Unparameterized = ModuleId 
-  ModuleName.Parameterized = <<ModuleId> [ <params:Symbols> ]> 
-  Attribute.Id = <id ( <ModuleName> )> 
-  ImpSection.Imports = <imports <list:Imports>> 
-  Grammar.Imp-section = ImpSection 
+  ModuleName.unparameterized = ModuleId 
+  ModuleName.parameterized = <<ModuleId> [ <params:Symbols> ]> 
+  Attribute.'id = <id ( <ModuleName> )> 
+  ImpSection.imports = <imports <list:Imports>> 
+  Grammar.imp-section = ImpSection 
   Imports = <<list:Import*>> 
-  Import.Module = ModuleName 
-  Import.Renamed-module = <<ModuleName> <Renamings>> 
+  Import.'module = ModuleName 
+  Import.renamed-module = <<ModuleName> <Renamings>> 
   Import = <( <Import> )> {bracket}
 
 lexical restrictions

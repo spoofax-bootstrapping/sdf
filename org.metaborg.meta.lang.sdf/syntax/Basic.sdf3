@@ -5,11 +5,11 @@ imports
 
 context-free syntax
 
-  Grammar.Lexical-syntax = <lexical syntax <Productions>> 
-  Grammar.Context-free-syntax = <context-free syntax <Productions>> 
-  Grammar.Variables = <variables <Productions>> 
-  Grammar.Lexical-variables = <lexical variables <Productions>> 
-  Symbol.Cf = <\< <Symbol> -CF \>> 
-  Symbol.Lex = <\< <Symbol> -LEX \>> 
-  Symbol.Varsym = <\< <Symbol> -VAR \>> 
-  Symbol.Layout = <LAYOUT> 
+  Grammar.lexical-syntax = <lexical syntax <Productions>> 
+  Grammar.context-free-syntax = <context-free syntax <Productions>> 
+  Grammar.variables = <variables <Productions>> 
+  Grammar.lexical-variables = <lexical variables <Productions>> 
+  Symbol.cf = <\< <Symbol> -CF \>> 
+  Symbol.lex = <\< <Symbol> -LEX \>> 
+  Symbol.varsym = <\< <Symbol> -VAR \>> 
+  Symbol.layout = <LAYOUT> 
