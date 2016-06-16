@@ -2,7 +2,6 @@ module generation/syntax/to-sdf
 
 imports
   libstratego-lib
-  libstratego-sglr
   libstratego-gpp
   utils/attributes
   utils/misc
@@ -14,6 +13,8 @@ imports
   pp/layout-constraints/Layout-Constraints-pp
   
 imports
+  // SDF3
+  signatures/TemplateLang-sig
   signatures/aliases/-
   signatures/aterms/-
   signatures/basic/-
@@ -34,7 +35,36 @@ imports
   signatures/sdf2-core/-
   signatures/sorts/-
   signatures/symbols/-
-  signatures/TemplateLang-sig
+  
+  // SDF2
+  signatures/Aliases-sig
+  signatures/ATerms-sig
+  signatures/Basic-sig
+  signatures/CC-sig
+  signatures/Character-Class-sig
+  signatures/Character-sig
+  signatures/Comments-sig
+  signatures/EditorAdditions-sig
+  signatures/Grammars-sig
+  signatures/IdentifierCon-sig
+  signatures/IntCon-sig
+  signatures/Kernel-sig
+  signatures/Labels-sig
+  signatures/Lifting-sig
+  signatures/Literals-sig
+  signatures/Modules-sig
+  signatures/NatCon-sig
+  signatures/Priority-sig
+  signatures/RealCon-sig
+  signatures/Regular-sig
+  signatures/Renaming-sig
+  signatures/Restrictions-sig
+  signatures/Sdf2-sig
+  signatures/Sdf2-Syntax-sig
+  signatures/Sorts-sig
+  signatures/Start-Symbols-sig
+  signatures/StrCon-sig
+  signatures/Symbols-sig
 
 rules
  

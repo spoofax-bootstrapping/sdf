@@ -2,14 +2,21 @@ module editor/build-utils
 
 imports
 
-  libstratego-sdf
   lib/ds/pp/-
   libstratego-gpp
-  lib/sdf-desugar
-  lib/sdf-parenthesize
   stratego/metaborg
-  signatures/kernel/Kernel-sig
+  
+  // SDF3
   signatures/TemplateLang-sig
+  signatures/kernel/Kernel-sig
+  
+  // SDF2
+  libstratego-sdf
+  lib/sdf-desugar
+  pp/SDF-pp
+  pp/SDF-parenthesize
+  
+  // ESV
   pp/EditorService-pp
   pp/EditorService-parenthesize
   
@@ -17,12 +24,11 @@ rules
   
   //pretty-printer for the generated sdf
   pp-sdf-to-string =
-  sdf-desugar;
-  parenthesize-Sdf2;
-  sdf-ppfix;
-  ast2box(|[<pp-table-sdf>, PP-Table([PP-Entry(Path1("Constructor"),[Arg("1")])])]);
-  box2text-string(|80)
-
+    sdf-desugar;
+    parenthesize-SDF;
+    sdf-ppfix;
+    ast2box(|[<pp-table-sdf>, PP-Table([PP-Entry(Path1("Constructor"),[Arg("1")])])]);
+    box2text-string(|80)
 
   pp-ds-to-string =
     ds-prettyprint-SDF-start-symbols
