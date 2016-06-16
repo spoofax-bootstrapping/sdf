@@ -7,7 +7,7 @@ imports
   pp/modules/Modules-pp
   pp/TemplateLang-pp
   signatures/kernel/Kernel-sig
-  lib/sdf3/TemplateLang-parenthesize
+  pp
   libstratego-gpp
   libstratego-aterm
 
@@ -131,13 +131,7 @@ rules
     with
       names := <strip-annos; string-tokenize(|['/'])> s;
       s'    := <last> names
-      
-  
-  pp-SDF3-string =
-    parenthesize-TemplateLang;
-    prettyprint-Module 
-    ; !V([], <id>)
-    ; box2text-string(|120)
+
       
   sugar-attributes:
     Attrs([]) -> NoAttrs()      

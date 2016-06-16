@@ -5,7 +5,7 @@ imports
   runtime/refactoring/-
   pp/TemplateLang-pp
   pp/modules/Modules-pp
-  lib/sdf3/TemplateLang-parenthesize
+  pp/TemplateLang-parenthesize
 
 rules
   
@@ -14,7 +14,6 @@ rules
     prettyprint-Module 
     ; !V([], <id>)
     ; box2text-string(|120)
-  
   
   pp-SDF3-string-abstract =
     prettyprint-Module 

@@ -1,7 +1,9 @@
 module generation/to-sdf3
 imports
+  // SDF2
   signatures/-
   
+  // SDF3
   signatures/TemplateLang-sig
   signatures/aliases/Aliases-sig
   signatures/aterms/Aterms-sig
